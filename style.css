@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+* {
+    font-family: 'Merriweather', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(sunset.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    background-color: rgb(32, 43, 43);
+    padding: 10px;
+    margin: 30px;
+    height: 500px;
+    width: 50vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    border-top: 5px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.container h1, p {
+    font-style: italic;
+    text-shadow: 2px 2px 2px #030303;
+}
+
+#displayResult {
+    background-color: rgb(34, 34, 34);
+    padding: 10px;
+    margin: 10px;
+    height: 160px;
+    width: 280px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ageInput {
+    width: 100%;
+    border: none;
+    margin-bottom: 10px;
+    background-color: rgba(248, 248, 248, 0.4);
+    text-align: center;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 2px rgba(26, 25, 25, 0.4);
+}
+
+#ageInput:focus {
+    outline: none;
+    background-color: white;
+}
+
+#ageInput::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+}
+
+.buttons {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons .refresh {
+    display: none;
+}
+
+.btn {
+    background-color: #fd8c00;
+    padding: 10px;
+    width: 100%;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:active {
+    transform: scale(0.5);
+}
+
+#resetBtn {
+    background-color: rgb(77, 76, 76);
+    color: white;
+}
+
+#resetBtn:hover {
+    background-color: black;
+}
+
+.alert {
+    display: none;
+}
+
+/* if alert is active */
+.alert.active {
+    display: block;
+}
+
+.alert2 {
+    display: none;
+}
+
+.alert2.active {
+    display: block;
+}
+
+.answer {
+    display: none;
+}
+
+.answer.active {
+    display: block;
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 300px) {
+    .container {
+        width: 90vw;
+    }
+}
